@@ -1,0 +1,45 @@
+/* Responsive styles for sidebar */
+@media (max-width: 768px) {
+  .sidebar-collapsed {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .sidebar-expanded {
+    width: 280px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar-container {
+    width: 280px;
+  }
+}
+
+/* Hide sidebar text on small screens when collapsed */
+@media (max-width: 1024px) {
+  .sidebar-mini .sidebar-text {
+    display: none;
+  }
+  
+  .sidebar-mini {
+    width: 64px;
+  }
+  
+  .sidebar-mini .sidebar-icon-only {
+    display: flex;
+    justify-content: center;
+  }
+}
